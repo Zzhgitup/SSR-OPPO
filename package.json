@@ -16,7 +16,9 @@
   },
   "dependencies": {
     "@pinia/nuxt": "^0.4.11",
+    "element-plus": "^2.3.12",
     "normalize.css": "^8.0.1",
-    "pinia": "^2.1.6"
+    "pinia": "^2.1.6",
+    "unplugin-element-plus": "^0.8.0"
   }
 }

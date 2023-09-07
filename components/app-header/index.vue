@@ -31,21 +31,18 @@
         </NuxtLink>
       </div>
     </div>
+    <navbar :navbars="navbars" />
   </div>
 </template>
 <script setup lang="ts">
-interface Inprops {
-  title?: string;
-}
-const props = withDefaults(defineProps<Inprops>(), {
-  title: "",
-});
+import { useHomestore } from "~/store/home";
+const { navbars } = useHomestore();
 </script>
 <style lang="scss" scoped>
 .app-header {
   background-color: #000;
   height: $appHeaderHeight;
-  /* 吸顶 */
+  padding-bottom: 85px; /* 吸顶 */
   @include elementSticky(0, 110);
 
   .link span {

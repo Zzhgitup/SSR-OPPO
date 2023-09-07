@@ -6,11 +6,9 @@
   </div>
 </template>
 <script setup lang="ts">
-interface Inprops {
-  title: string;
-}
-const props = withDefaults(defineProps<Inprops>(), {
-  title: "",
-});
+//引入store，
+import { useHomestore } from "@/store/home";
+const info = useHomestore();
+info.GetHomeinfo("OPPO");
 </script>
 <style scoped></style>

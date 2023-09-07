@@ -1,10 +1,16 @@
 <template>
-  <div class="home wrapper">你好</div>
+  <div class="home wrapper">
+    <Swipper :banners="banners" />
+  </div>
 </template>
-<script setup></script>
+<script setup lang="ts">
+import { storeToRefs } from "pinia";
+import { useHomestore } from "~/store/home";
+const homestore = useHomestore();
+const { banners } = storeToRefs(homestore);
+</script>
 <style lang="scss" scoped>
 .home {
-  height: 500px;
-  background-color: antiquewhite;
+  height: auto;
 }
 </style>
