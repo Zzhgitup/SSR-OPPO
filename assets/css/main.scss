@@ -1,0 +1,13 @@
+body {
+  font-size: 14px;
+  color: #333;
+}
+.wrapper {
+  width: $contentWidth;
+  margin: 0 auto;
+}
+li,
+ul {
+  margin: 0;
+  padding: 0;
+}
