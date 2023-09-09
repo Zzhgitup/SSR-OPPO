@@ -12,9 +12,15 @@ import { storeToRefs } from "pinia";
 import { useHomestore } from "~/store/home";
 import { Category } from "~/store/store";
 const homestore = useHomestore();
+await homestore.GetHomeinfo("oppo");
 const { banners, categorys } = storeToRefs(homestore);
 function handleItemClick(item: Category) {
-  console.log(item.title);
+  navigateTo({
+    path: "oppodetle",
+    query: {
+      type: item.type,
+    },
+  });
 }
 </script>
 <style lang="scss" scoped>

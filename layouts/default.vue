@@ -5,10 +5,5 @@
     <app-footer />
   </div>
 </template>
-<script setup lang="ts">
-//引入store，
-import { useHomestore } from "@/store/home";
-const info = useHomestore();
-info.GetHomeinfo("OPPO");
-</script>
+<script setup lang="ts"></script>
 <style scoped></style>
